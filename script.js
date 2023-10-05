@@ -43,3 +43,4 @@ Array.prototype.unique = function () {
 };
 
 console.log(arr.unique());
+console.log('Hello');
