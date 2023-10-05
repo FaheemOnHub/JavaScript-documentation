@@ -43,5 +43,48 @@ Array.prototype.unique = function () {
 };
 
 console.log(arr.unique());
-console.log('Hello');
-console.log('Hi');
+
+//Coding Challenge
+
+//1. Use a constructor function to implement a 'Car'. A car has a 'make' and a
+//'speed' property. The 'speed' property is the current speed of the car in
+//km/h
+//
+//2. Implement an 'accelerate' method that will increase the car's speed by 10,
+//and log the new speed to the console
+//
+//
+//3. Implement a 'brake' method that will decrease the car's speed by 5, and log
+//the new speed to the console
+//
+//
+//4. Create 2 'Car' objects and experiment with calling 'accelerate' and
+//'brake' multiple times on each of them
+//
+//
+//Test data:
+//§ Data car 1: 'BMW' going at 120 km/h
+//§ Data car 2: 'Mercedes' going at 95 km/h
+
+const Car = function (make, speed) {
+  this.Attribute = make;
+  this.SecondAttribute = speed;
+};
+
+const car1 = new Car('BMW', '110');
+const car2 = new Car('Mercedes', '100');
+console.log(car1);
+
+Car.prototype.accelerate = function () {
+  this.SecondAttribute = Math.trunc(this.SecondAttribute) + 10;
+  console.log(this.Attribute + ' going at ' + this.SecondAttribute + ' km/h');
+};
+
+car1.accelerate();
+
+Car.prototype.brake = function () {
+  this.SecondAttribute = Math.trunc(this.SecondAttribute) - 5;
+  console.log(this.Attribute + ' going at ' + this.SecondAttribute + ' km/h');
+};
+
+car2.brake();
