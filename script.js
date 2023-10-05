@@ -21,6 +21,7 @@ Person.prototype.calcAge = function () {
 
 Faheem.calcAge();
 jonas.calcAge();
+console.log('here', jonas.__proto__ == Person.prototype);
 console.log(jonas.__proto__); //Objects own Proto Property
 console.log(jonas.__proto__.__proto__); //This moves to Proto Property of Constructor Functions Prototype Object
 console.log(jonas.__proto__.__proto__.__proto__); //This will be Null as there is nothing after the JS Objects.Prototype;
@@ -81,10 +82,42 @@ Car.prototype.accelerate = function () {
 };
 
 car1.accelerate();
-
+car1.accelerate();
+car1.accelerate();
+car1.accelerate();
+car1.accelerate();
 Car.prototype.brake = function () {
   this.SecondAttribute = Math.trunc(this.SecondAttribute) - 5;
   console.log(this.Attribute + ' going at ' + this.SecondAttribute + ' km/h');
 };
 
 car2.brake();
+car2.brake();
+car2.brake();
+car2.brake();
+car2.brake();
+console.log('Both Crashed🚨');
+
+//Classes in JS
+//Basically
+
+//class declaration
+
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+  calcAge() {
+    console.log(2023 - this.birthYear);
+  }
+}
+
+const jessica = new PersonCl('Jessica', 1998);
+jessica.calcAge();
+console.log(jessica.__proto__ == PersonCl.prototype); //same as a constructor function
+
+//Setters set the value
+//Getters get the value
+
+console.log('hey');
