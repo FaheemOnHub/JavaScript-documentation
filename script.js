@@ -119,5 +119,3 @@ console.log(jessica.__proto__ == PersonCl.prototype); //same as a constructor fu
 
 //Setters set the value
 //Getters get the value
-
-console.log('hey');
